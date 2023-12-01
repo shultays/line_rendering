@@ -1,0 +1,8 @@
+#version 330 core
+out vec4 FragColor;
+in float l;
+void main()
+{
+	float t = mod(int(l / 10), 2) == 0 ? 0.0 : 1.0;
+	FragColor = vec4(t, t, t, 1.0f);
+}
